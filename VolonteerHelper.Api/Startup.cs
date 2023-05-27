@@ -25,18 +25,6 @@ namespace VolonteerHelper.Api
 
             services.AddControllers();
             services.AddSwaggerGen();
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("VueCorsPolicy", builder =>
-                {
-                    builder
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials()
-                    .WithOrigins("https://localhost:5001");
-                });
-            });
         }
 
         public void Configure(
