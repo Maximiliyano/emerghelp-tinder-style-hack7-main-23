@@ -41,4 +41,4 @@ const updateUser = async (user) => {
   })
 }
 
-export { getUser, updateUser }
+export { getUser, updateUser, db, app }
