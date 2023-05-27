@@ -1,0 +1,12 @@
+C:\hack7-main\VolonteerHelper.Web\bin\Debug\net7.0\VolonteerHelper.Web.deps.json
+C:\hack7-main\VolonteerHelper.Web\bin\Debug\net7.0\VolonteerHelper.Web.dll
+C:\hack7-main\VolonteerHelper.Web\bin\Debug\net7.0\VolonteerHelper.Web.pdb
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.csproj.AssemblyReference.cache
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.AssemblyInfoInputs.cache
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.AssemblyInfo.cs
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.csproj.CoreCompileInputs.cache
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.dll
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\refint\VolonteerHelper.Web.dll
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\VolonteerHelper.Web.pdb
+C:\hack7-main\VolonteerHelper.Web\obj\Debug\net7.0\ref\VolonteerHelper.Web.dll
