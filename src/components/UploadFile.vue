@@ -2,11 +2,12 @@
   <div>
     <input type="file" @change="handleFileUpload">
     <button @click="uploadImage">Upload</button>
+    <button @click="getImage">Get Image</button>
   </div>
 </template>
 
 <script>
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db } from '@/firebaseDb';
 
 export default {
@@ -47,6 +48,16 @@ export default {
           });
         }
       );
+    },
+    getImage() {
+      const storage = getStorage();
+      const storageRef = ref(storage, 'images/' + this.selectedFile.name);
+
+      getDownloadURL(storageRef).then((downloadURL) => {
+        this.imageUrl = downloadURL;
+      }).catch((error) => {
+        console.error(error);
+      });
     },
   },
 };
