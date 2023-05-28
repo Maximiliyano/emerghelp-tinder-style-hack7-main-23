@@ -11,18 +11,15 @@ const firebaseConfig = {
   measurementId: "G-DCKVWZPRD1"
 };
 
-const app = initializeApp(firebaseConfig)
-const db = getFirestore(app)
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const getUser = async (email) => {
   const userSnapshot = await getDoc(doc(db, 'users', email))
-  if (userSnapshot.exists()) 
-  {
+  if (userSnapshot.exists()) {
     console.log('success')
     return userSnapshot.data()
-  } 
-  else 
-  {
+  } else {
     const user = { email: email, credits: [], deposits: [], operations: [], total: 0 }
     console.log(user)
     await setDoc(doc(db, 'users', email), user)
@@ -41,4 +38,5 @@ const updateUser = async (user) => {
   })
 }
 
-export { getUser, updateUser, db, app }
+
+export { db, app, getUser, updateUser }

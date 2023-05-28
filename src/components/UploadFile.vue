@@ -3,6 +3,9 @@
     <input type="file" @change="handleFileUpload">
     <button @click="uploadImage">Upload</button>
     <button @click="getImage">Get Image</button>
+    <div v-if="imageUrl">
+      <img :src="imageUrl" alt="Uploaded Image">
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ export default {
   data() {
     return {
       selectedFile: null,
+      imageUrl: null
     };
   },
   methods: {

@@ -1,16 +1,20 @@
 <template>
 
-    <UploadFile></UploadFile>
-
+    <div>
+      <UploadFile></UploadFile>
+      <AboutPage></AboutPage>
+    </div>
 </template>
 
 <script>
 import UploadFile from './components/UploadFile.vue'
+import AboutPage from './views/AboutPage.vue'
 
 export default {
   name: 'App',
   components: {
-    UploadFile
+    UploadFile,
+    AboutPage
   }
 }
 </script>
