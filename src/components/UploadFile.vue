@@ -3,6 +3,7 @@
     <input type="file" @change="handleFileUpload">
     <button @click="uploadImage">Upload</button>
     <button @click="getImage">Get Image</button>
+    <button @click="registerUser">Register user</button>
     <div v-if="imageUrl">
       <img :src="imageUrl" alt="Uploaded Image">
     </div>
@@ -12,7 +13,7 @@
 <script>
 import { collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db } from '@/firebaseDb';
+import { db, getUser } from '@/firebaseDb';
 
 export default {
   data() {
@@ -22,6 +23,9 @@ export default {
     };
   },
   methods: {
+    async registerUser() {
+      await getUser('dssdfdf@sfd.fds');
+    },
     handleFileUpload(event) {
       this.selectedFile = event.target.files[0];
     },
