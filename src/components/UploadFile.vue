@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db } from '@/firebaseDb';
 
@@ -34,7 +35,6 @@ export default {
 
       const uploadTask = uploadBytes(storageRef, this.selectedFile, metadata);
 
-      
       uploadTask.on('state_changed',
         () => {
           
@@ -44,12 +44,22 @@ export default {
           console.error(error);
         },
         () => {
-          
           uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
             this.imageUrl = downloadURL;
            
-            db.collection('images').add({ url: downloadURL });
-          });
+            const imagesCollection = collection(db, "images");
+            const imageDocData = {
+              url: downloadURL
+            };
+
+            addDoc(imagesCollection, imageDocData)
+              .then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+              })
+              .catch((error) => {
+                console.error("Error adding document: ", error);
+              });
+                });
         }
       );
     },
