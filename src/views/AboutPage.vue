@@ -1,33 +1,36 @@
 <template>
-  <v-main>
     <v-container class="fill-height" fluid>
-      <v-row align="center" justify="center">
-        <v-col cols="12" sm="8" md="6">
-          <div class="display-3">RiceCode Volonteer</div>
-          <v-divider />
-          <p class="headline pt-4">You have reached the RiceCode Volonteer.</p>
-          <p class="headline pt-4">Please login to continue.</p>
-          <v-btn
-            v-if="!$auth.isAuthenticated"
+      <v-row class="px-4">
+      <v-col class="d-flex align-center flex-column justify-center">
+        <v-img max-width="350px" src="../../public/logo_black.png"></v-img>
+        <h1 class="mb-5 text-center">Swipe2Help is a tinder style help search service.</h1>
+        <v-btn x-large rounded class="green white--text large mb-4" v-if="!$auth.isAuthenticated"
             ref="loginBtn"
-            class="primary"
-            to="/login"
-          >
-            Login
-          </v-btn>
-        </v-col>
-      </v-row>
+            to="/login">Get Started</v-btn>
+        <v-divider></v-divider>
+        <h2>Our advantages</h2>
+        <v-row class="mb-5 ma-1">
+        <v-chip
+        class="my-4 mx-4"
+        color="primary"
+        outlined
+      >
+        Comfort to use
+      </v-chip>
+       <v-chip
+        class="my-4 mx-2"
+        color="primary"
+        outlined
+      >
+        Innovate
+      </v-chip>
+       </v-row>
+        <p style="font-size: 18px;">A tinder-style application has been developed to simplify the request for help.</p>
+        <p style="font-size: 18px; " class="mb-5">Our target audience is primarily volunteers</p>
+      </v-col>
+      <v-col cols="12" sm="9" class="pt-sm-3 pt-0"></v-col>
+    </v-row>
     </v-container>
-
-    <v-snackbar
-      ref="loginError"
-      color="error"
-      timeout="-1"
-      :value="$route.query.loginError"
-    >
-      Login failed. Please, make sure you are using right Google Account.
-    </v-snackbar>
-  </v-main>
 </template>
 
 <script>

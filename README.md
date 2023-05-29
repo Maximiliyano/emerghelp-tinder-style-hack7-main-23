@@ -1,24 +1,21 @@
-# frontend
-
 ## Project setup
-```
-npm install
-```
+
+npm install --global yarn
+
+yarn install
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
-```
+
+yarn serve serve
 
 ### Compiles and minifies for production
-```
-npm run build
-```
+
+yarn build
 
 ### Lints and fixes files
-```
-npm run lint
-```
+
+yarn lint
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# See [Configuration Reference](https://cli.vuejs.org/config/).
